@@ -105,22 +105,32 @@ function startGame(){
     questionN1();
 }
 
+function placeText(event){
+    let anwsers = Object.values(event);
+    for(let i = 0; i < btn.length; i++){
+        btn[i].textContent = anwsers[i];
+    }
+}
+
+function clearText(){
+    
+    for(let i = 0; i < btn.length; i++){
+        btn[i].textContent = " ";
+    }
+}
 
 
 function questionN1(){
 
     questionTextBox.textContent = questions.questionText1;
 
-    const anwsers = Object.values(anwsersList1);
-
-    for(let i = 0; i < btn.length; i++){
-        btn[i].textContent = anwsers[i];
-    }
+    placeText(anwsersList1);
 
     for (let key in btns){
         btns[key].addEventListener('click', function(){
             if(key == 'a' || key == 'd' || key == 'c'){
                 questionTextBox.textContent = questions.questionWrong;
+                clearText();
                 contentContainer.addEventListener('click', startGame);
             }
             if(key == 'b'){
@@ -133,16 +143,13 @@ function questionN1(){
 function questionN2(){
     questionTextBox.textContent = questions.questionText2;
 
-    const anwsers = Object.values(anwsersList2);
-
-    for(let i = 0; i < btn.length; i++){
-        btn[i].textContent = anwsers[i];
-    }
+    placeText(anwsersList2);
 
     for (let key in btns){
         btns[key].addEventListener('click', function(){
             if(key == 'b' || key == 'd' || key == 'c'){
                 questionTextBox.textContent = questions.questionWrong;
+                clearText()
                 contentContainer.addEventListener('click', startGame);
             }
             if(key == 'a'){
@@ -156,16 +163,13 @@ function questionN3 (){
 
     questionTextBox.textContent = questions.questionText3;
 
-    const anwsers = Object.values(anwsersList3);
-
-    for(let i = 0; i < btn.length; i++){
-        btn[i].textContent = anwsers[i];
-    }
+    placeText(anwsersList3);
 
     for (let key in btns){
         btns[key].addEventListener('click', function(){
             if(key == 'b' || key == 'd' || key == 'a'){
                 questionTextBox.textContent = questions.questionWrong;
+                clearText()
                 contentContainer.addEventListener('click', startGame);
             }
             if(key == 'c'){
@@ -179,16 +183,13 @@ function questionN4(){
     
     questionTextBox.textContent = questions.questionText4;
 
-    const anwsers = Object.values(anwsersList4);
-
-    for(let i = 0; i < btn.length; i++){
-        btn[i].textContent = anwsers[i];
-    }
+    placeText(anwsersList4);
 
     for (let key in btns){
         btns[key].addEventListener('click', function(){
             if(key == 'b' || key == 'd' || key == 'a'){
                 questionTextBox.textContent = questions.questionWrong;
+                clearText();
                 contentContainer.addEventListener('click', startGame);
             }
             if(key == 'c'){
@@ -202,15 +203,13 @@ function questionN5(){
 
     questionTextBox.textContent = questions.questionText5;
 
-    const anwsers = Object.values(anwsersList5);
+    placeText(anwsersList5);
 
-        for(let i = 0; i < btn.length; i++){
-            btn[i].textContent = anwsers[i];
-        }
         for (let key in btns){
             btns[key].addEventListener('click', function(){
                 if(key == 'b' || key == 'c' || key == 'a'){
                     questionTextBox.textContent = questions.questionWrong;
+                    clearText();
                     contentContainer.addEventListener('click', startGame);
                 }
                 if(key == 'd'){
@@ -224,15 +223,14 @@ function questionN6(){
 
     questionTextBox.textContent = questions.questionText6;
 
-    const anwsers = Object.values(anwsersList6);
+    placeText(anwsersList6);
 
-        for(let i = 0; i < btn.length; i++){
-            btn[i].textContent = anwsers[i];
-        }
+        
         for (let key in btns){
             btns[key].addEventListener('click', function(){
                 if(key == 'b' || key == 'c' || key == 'd'){
                     questionTextBox.textContent = questions.questionWrong;
+                    clearText();
                     contentContainer.addEventListener('click', startGame);
                 }
                 if(key == 'a'){
@@ -246,15 +244,13 @@ function questionN7(){
 
     questionTextBox.textContent = questions.questionText7;
 
-    const anwsers = Object.values(anwsersList7);
+    placeText(anwsersList7);
 
-        for(let i = 0; i < btn.length; i++){
-            btn[i].textContent = anwsers[i];
-        }
         for (let key in btns){
             btns[key].addEventListener('click', function(){
                 if(key == 'b' || key == 'c' || key == 'a'){
                     questionTextBox.textContent = questions.questionWrong;
+                    clearText();
                     contentContainer.addEventListener('click', startGame);
                 }
                 if(key == 'd'){
@@ -265,15 +261,16 @@ function questionN7(){
 }
 
 function questionN8(){
+
     questionTextBox.textContent = questions.questionText8;
-    const anwsers = Object.values(anwsersList8);
-        for(let i = 0; i < btn.length; i++){
-            btn[i].textContent = anwsers[i];
-        }
+
+    placeText(anwsersList8);
+
         for (let key in btns){
             btns[key].addEventListener('click', function(){
                 if(key == 'd' || key == 'c' || key == 'a'){
                     questionTextBox.textContent = questions.questionWrong;
+                    clearText();
                     contentContainer.addEventListener('click', startGame);
                 }
                 if(key == 'b'){
@@ -284,38 +281,41 @@ function questionN8(){
 }
 
 function questionN9(){
+
     questionTextBox.textContent = questions.questionText9;
-    const anwsers = Object.values(anwsersList9);
-        for(let i = 0; i < btn.length; i++){
-            btn[i].textContent = anwsers[i];
-        }
-        for (let key in btns){
-            btns[key].addEventListener('click', function(){
-                if(key == 'b' || key == 'c' || key == 'd'){
-                    questionTextBox.textContent = questions.questionWrong;
-                    contentContainer.addEventListener('click', startGame);
-                }
-                if(key == 'a'){
-                    questionN10();
-                }
-            })
-        }
+
+    placeText(anwsersList9);
+        
+    for (let key in btns){
+        btns[key].addEventListener('click', function(){
+            if(key == 'b' || key == 'c' || key == 'd'){
+                questionTextBox.textContent = questions.questionWrong;
+                clearText();
+                contentContainer.addEventListener('click', startGame);
+            }
+            if(key == 'a'){
+                questionN10();
+            }
+        })
+    }
 }
 
 function questionN10(){
+
     questionTextBox.textContent = questions.questionText10;
-    const anwsers = Object.values(anwsersList10);
-        for(let i = 0; i < btn.length; i++){
-            btn[i].textContent = anwsers[i];
-        }
+    
+    placeText(anwsersList10);
+      
         for (let key in btns){
             btns[key].addEventListener('click', function(){
                 if(key == 'b' || key == 'c' || key == 'd'){
                     questionTextBox.textContent = questions.questionWrong;
+                    clearText();
                     contentContainer.addEventListener('click', startGame);
                 }
                 if(key == 'a'){
-                    questionTextBox.textContent = "Победа! С играть ещё раз"
+                    questionTextBox.textContent = "Победа! С играть ещё раз";
+                    clearText();
                     contentContainer.addEventListener('click', startGame);
                 }
             })
