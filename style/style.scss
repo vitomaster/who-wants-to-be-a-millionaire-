@@ -107,6 +107,9 @@ button{
     float:left;
 }
 @media screen and (max-width:768px){
+    body{
+        height: 409px;
+    }
     .questionContainer{
         max-width:768px;
     }
