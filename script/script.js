@@ -57,7 +57,6 @@ const questions = {
     questionText10:'Из чего не состоит атом?',
 };
 
-
 const anwsersList1 = {
     a:"3",
     b:"5",
@@ -66,14 +65,6 @@ const anwsersList1 = {
 };
 
 console.log(btn);
-
-// anwsersList.forEach(function(item,i) {
-//     console.log(item,i)
-// });
-
-// for (let key in anwsersList){
-    
-// }
 
 const anwsersList2 = {
     a:'Барак Обама', //true
