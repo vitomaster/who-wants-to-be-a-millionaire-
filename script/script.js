@@ -57,13 +57,37 @@ const questions = {
     questionText10:'Из чего не состоит атом?',
 };
 
+<<<<<<< Updated upstream
+=======
+const btns = {
+    a:btnA,
+    b:btnB,
+    c:btnC
+    d;
+}
+>>>>>>> Stashed changes
 
 const anwsersList1 = {
     a:"3",
     b:"5",
+<<<<<<< Updated upstream
     c:"4", //true
     d:"0"
+=======
+    c:"4",
+    d:"0",
+>>>>>>> Stashed changes
 };
+
+console.log(btn);
+
+anwsersList.forEach(function(item,i) {
+    console.log(item,i)
+});
+
+for (let key in anwsersList){
+    
+}
 
 const anwsersList2 = {
     a:'Барак Обама', //true

@@ -180,6 +180,7 @@ aside{
 }
 
 button{
+<<<<<<< Updated upstream
     width: 650px;
     height: 75px;
     border-radius: 50px;
@@ -193,6 +194,11 @@ button:focus{
 .btn{
     color: white;
     font-size: 15px;
+=======
+    // width: 650px;
+    // height: 75px;
+    border: 0.5rem outset #626ae2;   border-radius: 12px;   font: bold 1rem sans-serif;   outline-offset: 0.5rem;   width: 650px;   height: 75px;
+>>>>>>> Stashed changes
 }
 .btnBox{
     margin: 25px;
