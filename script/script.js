@@ -67,13 +67,13 @@ const anwsersList1 = {
 
 console.log(btn);
 
-anwsersList.forEach(function(item,i) {
-    console.log(item,i)
-});
+// anwsersList.forEach(function(item,i) {
+//     console.log(item,i)
+// });
 
-for (let key in anwsersList){
+// for (let key in anwsersList){
     
-}
+// }
 
 const anwsersList2 = {
     a:'Барак Обама', //true
