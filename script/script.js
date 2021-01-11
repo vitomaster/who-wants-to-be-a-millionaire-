@@ -1,5 +1,5 @@
 console.log("online");
-
+// привет
 const btnA = document.querySelector(".btnA");
 const btnC = document.querySelector(".btnC");
 const btnB = document.querySelector(".btnB");
