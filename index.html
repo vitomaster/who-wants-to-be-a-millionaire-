@@ -7,42 +7,61 @@
     <title>Who wants to be a Millionere</title>
 </head>
 <body>
-    <main class="bigContainer">
+    <section class="introBox">
+        <section class="introTop">
+        <img class='introIcon'src="images/intro_icon.png" alt="">
+        </section>
+        
+        <section class="introBot"></section> 
+
+        <audio class="introMusic" src="audio/introOut.mp3"></audio>
+    </section>  
+    <!-- <nav>
+        <div class='navContainer'>
+                <img class='mainIcon' src="images/icon_nav.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </div>
+    </nav> -->
+    <main class="bigContainer">  
         <div class="questionContainer">
             <div class="contentContainer">
                 <span class="questionTextBox">Play</span>
+                <audio class='letsPlay' src="audio/letsPlay.mp3"></audio>
+                <audio class='ambiant' src="audio/ambiant.mp3"></audio>
             </div>
         </div>
         <div class="anwserContainer">
             <div class="anwserBoxTop">
                 <div class="btnBox">
                     <button class="btnA">
-                        <span class="btnCategore">a</span>
+                        <span class="btnCategore">A</span>
                         <span class="btn"></span>
                     </button>
                 </div>
                     <div class="btnBox">
                         <button class="btnC">
-                            <span class="btnCategore">c</span>
-                            <span class="btn"></span>                         
-                    </button>
-                </div>
+                            <span class="btnCategore">C</span>
+                            <span class="btn"></span> 
+                        </button>
+                    </div>
             </div>
+                <img class="checkbtn hide"  src="images/yesIcon.svg" alt="">
             <div class="anwserBoxBottom">
                     <div class="btnBox">
                         <button type="button" class="btnB">
-                            <span class="btnCategore">b</span>
+                            <span class="btnCategore">B</span>
                             <span class="btn"></span>
                         </button>
                     </div>
                     <div class="btnBox">
                         <button class="btnD">
-                            <span class="btnCategore">d</span>
+                            <span class="btnCategore">D</span>
                             <span class="btn"></span>
                     </button>
+                    
                 </div>
             </div>
         </div>
+        <aside></aside>
     </main>
 <script src="script/script.js"></script>    
 </body>

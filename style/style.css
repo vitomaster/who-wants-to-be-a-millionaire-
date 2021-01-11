@@ -60,12 +60,161 @@ body {
   background-repeat: no-repeat;
 }
 
+aside {
+  float: right;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+@-webkit-keyframes introIconAnime {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes introIconAnime {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes introAnimeTop {
+  0% {
+    background-color: black;
+    width: 100%;
+    height: 50%;
+  }
+  100% {
+    background-color: black;
+    height: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes introAnimeTop {
+  0% {
+    background-color: black;
+    width: 100%;
+    height: 50%;
+  }
+  100% {
+    background-color: black;
+    height: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes introAnimeBot {
+  0% {
+    background-color: black;
+    width: 100%;
+    height: 50%;
+  }
+  100% {
+    background-color: black;
+    height: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes introAnimeBot {
+  0% {
+    background-color: black;
+    width: 100%;
+    height: 50%;
+  }
+  100% {
+    background-color: black;
+    height: 0%;
+    width: 100%;
+  }
+}
+
 /*------------------------------------------------------------------------------------------------------------------------------*/
+.introIcon {
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.introBox {
+  height: 100%;
+  max-height: 100%;
+  min-height: 50%;
+  width: 100%;
+  position: absolute;
+}
+
+.introTop {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  border-bottom-style: solid;
+  border-bottom-color: silver;
+  border-bottom-width: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.introBot {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 50%;
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  bottom: 0px;
+  border-top-style: solid;
+  border-top-color: silver;
+  border-top-width: 3px;
+}
+
+.navContainer {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: aqua;
+  position: relative;
+}
+
+.mainIcon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
 .hide {
   display: none;
 }
@@ -101,9 +250,28 @@ body {
   display: grid;
 }
 
+.checkbtn {
+  height: 50px;
+  width: 50px;
+  margin-top: 100px;
+}
+
 button {
   width: 650px;
   height: 75px;
+  border-radius: 50px;
+  background-color: darkblue;
+  border: solid 3px silver;
+  outline: none;
+}
+
+button:focus {
+  border: solid 3px darkorange;
+}
+
+.btn {
+  color: white;
+  font-size: 15px;
 }
 
 .btnBox {
@@ -131,7 +299,12 @@ button {
 }
 
 .btnCategore {
+  display: list-item;
   float: left;
+  font-weight: bold;
+  list-style-type: disc;
+  margin-left: 15px;
+  color: #ff8800;
 }
 
 @media screen and (max-width: 768px) {

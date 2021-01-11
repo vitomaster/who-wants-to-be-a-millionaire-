@@ -1,4 +1,5 @@
 console.log("online");
+
 const btnA = document.querySelector(".btnA");
 const btnC = document.querySelector(".btnC");
 const btnB = document.querySelector(".btnB");
@@ -6,7 +7,35 @@ const btnD = document.querySelector(".btnD");
 const contentContainer = document.querySelector('.contentContainer');
 let questionTextBox = document.querySelector('.questionTextBox');
 const btn = document.querySelectorAll('.btn');
+const introBox = document.querySelector('.introBox');
+const introTop = document.querySelector('.introTop');
+const introBot = document.querySelector('.introBot');
+const introIcon = document.querySelector('.introIcon');
+const introMusic = document.querySelector('.introMusic');
+const yesIcon = document.querySelector('.checkbtn');
+const letsPlay = document.querySelector('.letsPlay');
+const ambiant = document.querySelector('.ambiant')
 
+
+
+introIcon.addEventListener('click', () =>{
+    introTop.style.animationName = 'introAnimeTop';
+    introTop.style.backgroundColor = 'inherit';
+    introTop.style.animationDuration = '4s';
+    introBot.style.backgroundColor = 'inherit';
+    introBot.style.animationName = 'introAnimeBot';
+    introIcon.style.animationName = 'introIconAnime';
+    introMusic.play();
+
+    setTimeout(function () {
+        introIcon.classList.add('hide');
+    },2000);
+    
+    setTimeout(function () {
+        introBox.style.display = 'none';
+    },4000);
+})
+    
 const btns = {
     a:btnA,
     b:btnB,
@@ -100,11 +129,6 @@ const anwsersList10 = {
 
 contentContainer.addEventListener('click', startGame);
 
-function startGame(){
-    contentContainer.removeEventListener('click', startGame);
-    questionN1();
-}
-
 function placeText(event){
     let anwsers = Object.values(event);
     for(let i = 0; i < btn.length; i++){
@@ -113,11 +137,27 @@ function placeText(event){
 }
 
 function clearText(){
-    
     for(let i = 0; i < btn.length; i++){
         btn[i].textContent = " ";
     }
 }
+
+
+
+function startGame(){
+
+    letsPlay.play();
+
+    setTimeout(function letsPlayF() {
+        letsPlay.pause();
+    },6000);
+
+    ambiant.play();
+
+    contentContainer.removeEventListener('click', startGame);
+    questionN1();
+}
+
 
 
 function questionN1(){
@@ -127,7 +167,7 @@ function questionN1(){
     placeText(anwsersList1);
 
     for (let key in btns){
-        btns[key].addEventListener('click', function(){
+        btns[key].addEventListener('click', function (){
             if(key == 'a' || key == 'd' || key == 'c'){
                 questionTextBox.textContent = questions.questionWrong;
                 clearText();
@@ -136,7 +176,7 @@ function questionN1(){
             if(key == 'b'){
                 questionN2();
             }
-        })
+        });
     }
 }
 
@@ -321,18 +361,3 @@ function questionN10(){
             })
         }
 }
-
-// class x {
-//     constructor(question,anwsers){
-//         this.question = question;
-//         this.awnsers = anwsers;
-//     }
-//     questionCreator(){
-//         questionTextBox.textContent = this.question;
-        
-//         const anwsersShow = this.anwsers;
-//         for(let i = 0; i < btn.length; i++){
-//             btn[i].textContent = anwsersShow;
-//         }
-//     }
-// }
