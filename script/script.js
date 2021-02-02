@@ -18,23 +18,23 @@ const ambiant = document.querySelector('.ambiant')
 
 
 
-introIcon.addEventListener('click', () =>{
-    introTop.style.animationName = 'introAnimeTop';
-    introTop.style.backgroundColor = 'inherit';
-    introTop.style.animationDuration = '4s';
-    introBot.style.backgroundColor = 'inherit';
-    introBot.style.animationName = 'introAnimeBot';
-    introIcon.style.animationName = 'introIconAnime';
-    introMusic.play();
+// introIcon.addEventListener('click', () =>{
+//     introTop.style.animationName = 'introAnimeTop';
+//     introTop.style.backgroundColor = 'inherit';
+//     introTop.style.animationDuration = '4s';
+//     introBot.style.backgroundColor = 'inherit';
+//     introBot.style.animationName = 'introAnimeBot';
+//     introIcon.style.animationName = 'introIconAnime';
+//     introMusic.play();
 
-    setTimeout(function () {
-        introIcon.classList.add('hide');
-    },2000);
+//     setTimeout(function () {
+//         introIcon.classList.add('hide');
+//     },2000);
     
-    setTimeout(function () {
-        introBox.style.display = 'none';
-    },4000);
-})
+//     setTimeout(function () {
+//         introBox.style.display = 'none';
+//     },4000);
+// })
     
 const btns = {
     a:btnA,
@@ -64,7 +64,6 @@ const anwsersList1 = {
     d:"0"
 };
 
-console.log(btn);
 
 const anwsersList2 = {
     a:'Барак Обама', //true
