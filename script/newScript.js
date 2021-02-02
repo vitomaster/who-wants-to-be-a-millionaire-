@@ -93,7 +93,6 @@ window.addEventListener('DOMContentLoaded',() =>{
                     `;
                 }
             }
-            this.anwser.sort();
             let btns = document.querySelectorAll('button');
             btns[0].setAttribute('data-select', '');
             btns.forEach(item =>{
